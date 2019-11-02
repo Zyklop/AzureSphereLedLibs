@@ -1,0 +1,14 @@
+{
+  "SchemaVersion": 1,
+  "Name" : "Sample",
+  "ComponentId" : "17813cec-fdd7-4a92-9757-42e9626fe020",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [],
+  "Capabilities": {
+    "AllowedConnections": [],
+    "Pwm": [ "PWM-CONTROLLER-2" ],
+    "Uart": [],
+    "WifiConfig": false
+  },
+  "ApplicationType":"Default"
+}

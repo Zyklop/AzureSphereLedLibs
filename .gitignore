@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+/.vs
+**/bin/**
+**/obj/**
+*vcxproj.filters
+*vcxproj.user
+*sln.DotSettings.user
