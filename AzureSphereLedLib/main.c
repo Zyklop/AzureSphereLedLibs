@@ -5,11 +5,18 @@
 
 #include <applibs/log.h>
 #include "PwmControl.h"
+#include "Apa102Control.h"
 
 
 int main(void)
 {
 
+	SetupApa102(1, -1);
+	struct ColorWithBrightness apaColor = { 31, 150, 150, 150 };
+	SetSolid(apaColor, 2);
+	TeardownApa102();
+	
+	
 	SetupPwm(2, 0, 1, 2);
 	struct timespec sleeper = { 0,5000000 };
 

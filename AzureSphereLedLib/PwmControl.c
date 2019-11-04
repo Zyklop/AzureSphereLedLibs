@@ -71,15 +71,15 @@ int TeardownPwm()
 
 int SetColor(struct Color color)
 {
-	return SetColorFromChar(color.Red, color.Green, color.Blue);
+	return SetColorFromBytes(color.Red, color.Green, color.Blue);
 }
 
 int SetColorFromInt(int red, int green, int blue)
 {
-	return SetColorFromChar((unsigned char)red, (unsigned char)green, (unsigned char)blue);
+	return SetColorFromBytes((uint8_t)red, (uint8_t)green, (uint8_t)blue);
 }
 
-int SetColorFromChar(unsigned char red, unsigned char green, unsigned char blue)
+int SetColorFromBytes(uint8_t red, uint8_t green, uint8_t blue)
 {
 	redState.dutyCycle_nsec = red * stepLength;
 	greenState.dutyCycle_nsec = green * stepLength;
@@ -91,9 +91,11 @@ int SetColorFromChar(unsigned char red, unsigned char green, unsigned char blue)
 		Log_Debug("PWM_Apply failed: result = %d, errno: %s (%d)\n", result, strerror(errno),
 			errno);
 	}
+
+	return 0;
 }
 
 int TurnOff()
 {
-	return SetColorFromChar(0, 0, 0);
+	return SetColorFromBytes(0, 0, 0);
 }

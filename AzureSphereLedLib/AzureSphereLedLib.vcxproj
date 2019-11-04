@@ -43,11 +43,14 @@
     </TargetHardwareDefinition>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="Apa102Control.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="PwmControl.c" />
     <UpToDateCheckInput Include="app_manifest.json" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Apa102Control.h" />
+    <ClInclude Include="libsVersions.h" />
     <ClInclude Include="PwmControl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
