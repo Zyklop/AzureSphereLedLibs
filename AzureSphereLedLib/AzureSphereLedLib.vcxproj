@@ -46,12 +46,14 @@
     <ClCompile Include="Apa102Control.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="PwmControl.c" />
+    <ClCompile Include="Samples.c" />
     <UpToDateCheckInput Include="app_manifest.json" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Apa102Control.h" />
     <ClInclude Include="libsVersions.h" />
     <ClInclude Include="PwmControl.h" />
+    <ClInclude Include="Samples.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
