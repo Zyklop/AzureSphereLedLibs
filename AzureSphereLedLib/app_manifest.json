@@ -7,6 +7,7 @@
   "Capabilities": {
     "AllowedConnections": [],
     "Pwm": [ "PWM-CONTROLLER-2" ],
+    "SpiMaster": [ "ISU1" ],
     "Uart": [],
     "WifiConfig": false
   },

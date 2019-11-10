@@ -3,46 +3,12 @@
 #include <string.h>
 #include <time.h>
 
-#include <applibs/log.h>
-#include "PwmControl.h"
-
+#include "Samples.h"
 
 int main(void)
 {
-
-	SetupPwm(2, 0, 1, 2);
-	struct timespec sleeper = { 0,5000000 };
-
-	struct Color color = { 255, 0, 0 };
-
-	while(1)
-	{
-		if (color.Red)
-		{
-			if (color.Blue)
-			{
-				color.Blue--;
-				color.Red++;
-			}
-			else
-			{
-				color.Red--;
-				color.Green++;
-			}
-		}
-		else if (color.Green)
-		{
-			color.Green--;
-			color.Blue++;
-		}
-		else
-		{
-			color.Blue--;
-			color.Red++;
-		}
-		SetColor(color);
-		nanosleep(&sleeper, NULL);
-	}
-	
-	TeardownPwm();
+	//PwmRainbow(2, 0, 1, 2, 10);
+	//ApaSolidRainbow(1, -1, 2, 10);
+	//ApaMovingLight(1, -1, 3, 500);
+	ApaMovingRainbow(1, -1, 2, 10);
 }
